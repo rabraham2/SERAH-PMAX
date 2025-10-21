@@ -145,6 +145,7 @@ e) Visualisation & Reporting
 Step 1: Data Audit & Cleaning
 
 Run: python src/clean_and_engineer.py
+
 Purpose: Cleans and audits raw campaign data.
 Produces: data/interim/
   - tcg_sea_cleaned.csv – cleaned and feature-engineered dataset
@@ -154,6 +155,7 @@ Derived metrics: CTR, CPC, CVR, CPA, ROAS, Value per Click (VPC), seasonal & tem
 Step 2: Chronological Split (No Leakage)
 
 Run: python src/split_and_save.py
+
 Purpose: Creates leak-free chronological splits (70/15/15).
 Outputs: data/processed/
   - X_train.parquet, X_valid.parquet, X_test.parquet – model input features
@@ -163,6 +165,7 @@ Console summary: number of records in each split
 Step 3: Model Training & Bid Recommendation
 
 Run: python src/train_and_recommend.py
+
 Purpose: Trains an AI model to predict Value per Click (VPC) and recommends optimal bids.
 Model: HistGradientBoostingRegressor (HGBR)
 Outputs: data/processed/
@@ -174,6 +177,7 @@ Console summary: top features, prediction accuracy, bid recommendation range
 Step 4: Performance Simulation & Comparison
 
 Run: python src/compare_baseline_vs_recommended.py
+
 Purpose: Simulates post-optimisation performance and visualises results.
 Outputs: data/outputs/visuals/
   - kpi_comparison_optimistic.png – Baseline vs AI total KPI bar chart
@@ -191,6 +195,7 @@ Outputs: data/outputs/visuals/
 Step 5: Scenario Adjustment (Optional)
 
 Run: conservative or optimistic simulation - python src/compare_baseline_vs_recommended.py --scenario conservative
+
 Purpose: Simulates different elasticity and conversion-rate sensitivities.
 Outputs: same charts saved under data/outputs/visuals/ with suffix _conservative or _optimistic.
 
@@ -211,6 +216,7 @@ Console summary: Top-performing segments and total revenue lift (%)
 Step 7: Bid-Change Impact Analysis
 
 Run: Automatically triggered after simulation
+
 Purpose: Show where bid increases created meaningful revenue growth.
 Outputs: data/outputs/visuals/
   - bid_change_vs_revenue_delta.png – Scatterplot of % Bid Change vs Revenue Lift
