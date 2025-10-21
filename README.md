@@ -9,10 +9,9 @@ SERAH-PMAX is an AI-driven digital advertising intelligence and bid-optimisation
 3. [System Requirements](#system-requirements)
 4. [Installation and Setup](#installation-and-setup)
 5. [Instructions to Run](#instructions)
-6. [Scripts and Roles](#scripts-and-roles)
-7. [Running the Scripts](#running-the-scripts)
-8. [Project Structure](#project-structure)
-9. [License](#license)
+6. [Running the Scripts](#running-the-scripts)
+7. [Project Structure](#project-structure)
+8. [License](#license)
 
 ---
 
