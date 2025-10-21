@@ -190,10 +190,7 @@ Outputs: data/outputs/visuals/
 
 Step 5: Scenario Adjustment (Optional)
 
-Run:
-
-# conservative or optimistic simulation
-python src/compare_baseline_vs_recommended.py --scenario conservative
+Run: conservative or optimistic simulation - python src/compare_baseline_vs_recommended.py --scenario conservative
 Purpose: Simulates different elasticity and conversion-rate sensitivities.
 Outputs: same charts saved under data/outputs/visuals/ with suffix _conservative or _optimistic.
 
